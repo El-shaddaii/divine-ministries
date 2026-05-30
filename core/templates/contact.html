@@ -1,1 +1,205 @@
-<h1>Contact Page</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HERO -->
+
+<section class="contact-hero">
+
+```
+<div class="contact-hero-content">
+
+    <h1>Join the Mission</h1>
+
+    <p>
+        Every act of kindness has the power to transform lives. Whether you choose
+        to volunteer, support a project, partner with us, or simply reach out,
+        you can be part of a movement bringing hope, dignity, and opportunity
+        to communities in need.
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- WAYS TO GET INVOLVED -->
+
+<section>
+
+```
+<div class="section-header">
+    <h2>Ways To Get Involved</h2>
+
+    <p>
+        There are many ways to support the work of Divine Ministries and help
+        create lasting impact in communities.
+    </p>
+</div>
+
+<div class="involvement-grid">
+
+    <div class="contact-card">
+        <h3>🤝 Volunteer</h3>
+
+        <p>
+            Join outreach programs, community events, and ministry initiatives
+            that directly impact lives.
+        </p>
+
+        <a href="#" class="btn btn-primary">
+            Become a Volunteer
+        </a>
+    </div>
+
+    <div class="contact-card">
+        <h3>❤️ Donate</h3>
+
+        <p>
+            Help fund projects that provide food assistance, educational support,
+            and community outreach.
+        </p>
+
+        <a href="#" class="btn btn-primary">
+            Support The Mission
+        </a>
+    </div>
+
+    <div class="contact-card">
+        <h3>🌍 Partner</h3>
+
+        <p>
+            Partner with Divine Ministries to expand our reach and strengthen
+            communities together.
+        </p>
+
+        <a href="#" class="btn btn-primary">
+            Become A Partner
+        </a>
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- CONTACT FORM -->
+
+<section class="contact-form-section">
+
+```
+<div class="section-header">
+
+    <h2>Let's Start A Conversation</h2>
+
+    <p>
+        We'd love to hear from you. Whether you have questions, ideas,
+        partnership opportunities, or would like to learn more about our work,
+        our team is ready to connect.
+    </p>
+
+</div>
+
+<form class="contact-form">
+
+    <input
+        type="text"
+        placeholder="Full Name"
+        required
+    >
+
+    <input
+        type="email"
+        placeholder="Email Address"
+        required
+    >
+
+    <input
+        type="text"
+        placeholder="Phone Number (Optional)"
+    >
+
+    <select>
+
+        <option>
+            Area of Interest
+        </option>
+
+        <option>
+            Volunteer
+        </option>
+
+        <option>
+            Donate
+        </option>
+
+        <option>
+            Partner
+        </option>
+
+        <option>
+            General Inquiry
+        </option>
+
+    </select>
+
+    <textarea
+        rows="6"
+        placeholder="Your Message"
+    ></textarea>
+
+    <button
+        type="submit"
+        class="btn btn-primary"
+    >
+        Send Message
+    </button>
+
+</form>
+```
+
+</section>
+
+<!-- MOVEMENT -->
+
+<section class="movement-section">
+
+```
+<h2>More Than a Ministry. A Movement of Hope.</h2>
+
+<p>
+    Divine Ministries exists to bring hope where it is needed most.
+    Through compassion, service, and faith driven action, we work
+    alongside communities to create meaningful and lasting change.
+    Every volunteer, donor, partner, and supporter becomes part of
+    something bigger—a movement committed to transforming lives
+    and restoring dignity.
+</p>
+
+<a href="#" class="btn btn-primary">
+    Join The Movement
+</a>
+```
+
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+```
+<h2>Ready To Make A Difference?</h2>
+
+<p>
+    Together we can reach more families, support more communities,
+    and build a brighter future.
+</p>
+
+<a href="#" class="btn btn-primary">
+    Get Involved Today
+</a>
+```
+
+</section>
+
+{% endblock %}
