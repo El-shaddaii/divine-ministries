@@ -1,1 +1,107 @@
-<h1>Projects Page</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="projects-hero">
+
+    <div class="projects-hero-content">
+        <h1>Our Projects</h1>
+
+        <p>
+            Through faith, compassion, and action, Divine Ministries supports
+            vulnerable communities through sustainable initiatives that create
+            lasting impact.
+        </p>
+    </div>
+
+</section>
+
+<section class="projects-section">
+
+    <div class="section-header">
+        <h2>Making A Difference</h2>
+
+        <p>
+            Every project is designed to bring hope, dignity, and opportunity
+            to those who need it most.
+        </p>
+    </div>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd59a93f7d5f?w=1200" alt="Food Program">
+
+            <div class="project-content">
+                <h3>Food Assistance Program</h3>
+
+                <p>
+                    Providing meals and essential supplies to families facing
+                    food insecurity.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200" alt="Youth">
+
+            <div class="project-content">
+                <h3>Youth Empowerment</h3>
+
+                <p>
+                    Supporting young people through mentorship, education,
+                    leadership development, and skills training.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200" alt="Community">
+
+            <div class="project-content">
+                <h3>Community Outreach</h3>
+
+                <p>
+                    Reaching underserved communities with practical support,
+                    encouragement, and humanitarian aid.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200" alt="Education">
+
+            <div class="project-content">
+                <h3>Education Support</h3>
+
+                <p>
+                    Helping students access learning resources, school supplies,
+                    and educational opportunities.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="projects-impact">
+
+    <div class="impact-item">
+        <h2>500+</h2>
+        <p>Families Reached</p>
+    </div>
+
+    <div class="impact-item">
+        <h2>20+</h2>
+        <p>Projects Completed</p>
+    </div>
+
+    <div class="impact-item">
+        <h2>100+</h2>
+        <p>Volunteers</p>
+    </div>
+
+</section>
+
+{% endblock %}
