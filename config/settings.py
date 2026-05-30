@@ -141,6 +141,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = "elshaddaimhango@gmail.com"
-EMAIL_HOST_PASSWORD = "icngcntoaxeuzebr"
+EMAIL_HOST_PASSWORD = "xfrmfwqwiqwyogoo"
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
