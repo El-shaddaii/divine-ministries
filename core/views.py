@@ -57,7 +57,11 @@ MESSAGE
 #            except Exception as e:
 #                print("EMAIL ERROR:", str(e))
  
-            email.send(fail_silently=False)             
+            try:
+                email.send(fail_silently=False)
+            except Exception as e:
+                print("EMAIL ERROR:", e)
+
             return redirect("contact_success")
 
     else:
