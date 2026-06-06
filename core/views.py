@@ -51,12 +51,12 @@ MESSAGE
                 to=["elshaddaimhango@gmail.com"],
                 reply_to=[submission.email],
             )
-
-#            try:
-#                email.send()
-#           except Exception as e:
-#                print("EMAIL ERROR:", e)
-#
+            try:
+                email.send()
+                print("EMAIL SENT")
+            except Exception as e:
+                print("EMAIL ERROR:", str(e))
+                
             return redirect("contact_success")
 
     else:
