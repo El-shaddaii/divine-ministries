@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.core.mail import EmailMessage
+import os
+import resend
 
 from .forms import ContactSubmissionForm
 
@@ -44,23 +46,14 @@ MESSAGE
 {submission.message}
 """
 
-            email = EmailMessage(
-                subject=subject,
-                body=message,
-                from_email=settings.EMAIL_HOST_USER,
-                to=["elshaddaimhango@gmail.com"],
-                reply_to=[submission.email],
-            )
-#            try:
-#                email.send()
-#                print("EMAIL SENT")
-#            except Exception as e:
-#                print("EMAIL ERROR:", str(e))
- 
-            try:
-                email.send(fail_silently=False)
-            except Exception as e:
-                print("EMAIL ERROR:", e)
+            resend.api_key = os.getenv("RESEND_API_KEY")
+
+            resend.Emails.send({
+                "from": "onboarding@resend.dev",
+                "to": ["elshaddaimhango@gmail.com"],
+                "subject": subject,
+                "text": message,
+            })
 
             return redirect("contact_success")
 
