@@ -49,7 +49,7 @@ MESSAGE
             resend.api_key = os.getenv("RESEND_API_KEY")
 
             resend.Emails.send({
-                "from": "onboarding@resend.dev",
+                "from": "Divine Ministries <contact@divine-ministries.com>",
                 "to": ["elshaddaimhango@gmail.com"],
                 "subject": subject,
                 "text": message,
