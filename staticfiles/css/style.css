@@ -897,88 +897,97 @@ footer {
 .donate-btn:hover {
     background: #c92a35;
 }
+
 /* =========================
-   DONATION PAGE (PREMIUM CLEAN STYLE)
+   DONATION PAGE - PREMIUM NAVY THEME
 ========================= */
 
 .donate-section {
-    padding: 100px 20px;
-    background: #f6f7fb;
+    padding: 110px 20px;
+    background: linear-gradient(135deg, #071424, #0b1b2b);
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
 
+/* CONTAINER */
 .container {
     max-width: 900px;
     margin: 0 auto;
 }
 
-/* TITLE */
+/* =========================
+   TEXT STYLES
+========================= */
+
 .donate-title {
-    font-size: 44px;
+    font-size: 46px;
     font-weight: 700;
-    color: #111;
+    color: #ffffff;
     margin-bottom: 20px;
     letter-spacing: -0.5px;
 }
 
-/* TEXT */
 .donate-intro,
 .donate-info {
-    font-size: 18px;
-    color: #555;
+    font-size: 17px;
+    color: rgba(255,255,255,0.75);
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto 15px auto;
 }
 
-/* SUBTITLE */
 .donate-subtitle {
     margin-top: 50px;
     font-size: 22px;
     font-weight: 600;
-    color: #222;
+    color: #ffffff;
 }
 
-/* GRID */
+/* =========================
+   GRID LAYOUT
+========================= */
+
 .donation-options {
-    margin-top: 40px;
+    margin-top: 45px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 20px;
+    gap: 22px;
 }
 
-/* CARD */
+/* =========================
+   DONATION CARDS
+========================= */
+
 .donate-card {
-    background: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 14px;
-    padding: 30px 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 22px;
     text-decoration: none;
-    color: inherit;
+    color: #111;
     transition: all 0.25s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .donate-card:hover {
-    transform: translateY(-6px);
-    border-color: #d6d6d6;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 }
 
 /* ICON */
 .icon {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 10px;
     opacity: 0.9;
 }
 
 /* AMOUNT */
 .donate-card h3 {
-    font-size: 26px;
+    font-size: 28px;
     margin: 8px 0;
     font-weight: 700;
     color: #111;
@@ -987,21 +996,52 @@ footer {
 /* DESCRIPTION */
 .donate-card p {
     font-size: 14px;
-    color: #777;
+    color: #666;
 }
 
-/* HIGHLIGHT (MISSION PARTNER) */
+/* =========================
+   SPECIAL CARD (MISSION PARTNER)
+========================= */
+
 .donate-card.highlight {
-    border: 2px solid #111;
-    background: #fafafa;
+    border: 2px solid rgba(255,255,255,0.25);
+    background: linear-gradient(180deg, #ffffff, #f4f7ff);
+    position: relative;
 }
 
-/* THANK YOU TEXT */
+/* subtle glow effect */
+.donate-card.highlight::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 16px;
+    background: radial-gradient(circle at top, rgba(255,255,255,0.2), transparent 60%);
+    z-index: -1;
+}
+
+/* =========================
+   THANK YOU TEXT
+========================= */
+
 .thank-you {
     margin-top: 60px;
     font-size: 15px;
-    color: #666;
+    color: rgba(255,255,255,0.6);
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* =========================
+   MOBILE FIXES
+========================= */
+
+@media (max-width: 600px) {
+    .donate-title {
+        font-size: 34px;
+    }
+
+    .donate-card {
+        padding: 26px 18px;
+    }
 }
