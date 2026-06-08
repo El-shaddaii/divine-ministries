@@ -1,50 +1,50 @@
 {% extends "base.html" %}
-<!DOCTYPE html>
-{% block content %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate | Divine Ministries</title>
-</head>
-<body>
 
-```
+{% block content %}
+
 <section class="donate-section">
+
     <div class="container">
 
-        <h1>Support Divine Ministries</h1>
+        <h1 class="donate-title">🙏 Support Divine Ministries</h1>
 
-        <p>
+        <p class="donate-intro">
             Thank you for supporting the work of Divine Ministries.
             Your generosity helps us continue sharing the Gospel,
             serving communities, and advancing ministry initiatives.
         </p>
 
-        <p>
+        <p class="donate-info">
             Donations are processed through Cash App. After selecting
-            an amount below, you will be automatically redirected to
-            Cash App to complete your donation securely.
+            an amount below, you will be redirected to complete your donation securely.
         </p>
 
-        <h2>Choose Your Donation Amount</h2>
+        <h2 class="donate-subtitle">Choose Your Donation Amount</h2>
 
         <div class="donation-options">
 
-            <a href="https://cash.app/pay/link/4lcjolv1" class="donate-btn">
-                Donate $10
+            <a href="https://cash.app/pay/link/4lcjolv1" class="donate-card">
+                <span class="icon">💛</span>
+                <h3>$10</h3>
+                <p>Seed Offering</p>
             </a>
 
-            <a href="https://cash.app/pay/link/o73s8smx" class="donate-btn">
-                Donate $50
+            <a href="https://cash.app/pay/link/o73s8smx" class="donate-card">
+                <span class="icon">💚</span>
+                <h3>$50</h3>
+                <p>Support Offering</p>
             </a>
 
-            <a href="https://cash.app/pay/link/8iinz60t" class="donate-btn">
-                Donate $100
+            <a href="https://cash.app/pay/link/8iinz60t" class="donate-card">
+                <span class="icon">💙</span>
+                <h3>$100</h3>
+                <p>Impact Gift</p>
             </a>
 
-            <a href="https://cash.app/pay/link/qidfi4le" class="donate-btn">
-                Donate $500
+            <a href="https://cash.app/pay/link/qidfi4le" class="donate-card highlight">
+                <span class="icon">🌍</span>
+                <h3>$500</h3>
+                <p>Mission Partner</p>
             </a>
 
         </div>
@@ -55,9 +55,7 @@
         </p>
 
     </div>
-</section>
-```
 
-</body>
-</html>
-{% endblock  %}
+</section>
+
+{% endblock %}
