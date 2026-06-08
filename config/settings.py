@@ -28,6 +28,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "divine-ministries.com",
     "www.divine-ministries.com",
+    "localhost",
+    "127.0.0.1",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
