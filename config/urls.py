@@ -5,7 +5,8 @@ from core.views import (
     home,
     projects,
     contact,
-    contact_success
+    contact_success,
+    donations,
 )
 
 urlpatterns = [
@@ -17,9 +18,7 @@ urlpatterns = [
 
     path("contact/", contact, name="contact"),
 
-    path(
-        "contact-success/",
-        contact_success,
-        name="contact_success"
-    ),
+    path("contact-success/", contact_success, name="contact_success"),
+
+    path("donate/", donations, name="donations"),
 ]

@@ -71,3 +71,6 @@ MESSAGE
 
 def contact_success(request):
     return render(request, "contact_success.html")
+
+def donations(request):
+    return render(request, "donations.html")
