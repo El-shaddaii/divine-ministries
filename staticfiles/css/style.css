@@ -1217,7 +1217,25 @@ footer {
         font-size: 24px;
     }
 }
+.underline-title{
+    position: relative;
+    display: inline-block;
+    color: inherit;
+}
 
+.underline-title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-2px;
+
+    width:100%;
+    height:3px;
+
+    background: linear-gradient(90deg, #ff3b30, #b00020);
+
+    border-radius:999px;
+}
 
 /* ==========================================================
    PHONE RESPONSIVE (500px)
@@ -1235,7 +1253,7 @@ footer {
     }
 
     .logo {
-        font-size: 19px;
+        font-size: 20px;
         text-align: center;
     }
 
@@ -1250,11 +1268,12 @@ footer {
     }
 
     nav > div:last-child a {
-        white-space: nowrap;
-        text-align: center;
-        padding: 7px 5px;
-        font-size: 12px;
-        margin: 0;
+    white-space: nowrap;
+    text-align: center;
+    padding: 8px 6px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
     }
 
     nav > div:last-child a:nth-child(1) {
@@ -1377,5 +1396,24 @@ footer {
         padding: 25px 15px;
         font-size: 13px;
         line-height: 1.6;
+    }
+    .underline-title{
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    }
+
+    .underline-title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-2px;
+
+    width:100%;
+    height:3px;
+
+    background: linear-gradient(90deg, #ff3b30, #b00020);
+
+    border-radius:999px;
     }
 }
