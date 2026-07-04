@@ -74,3 +74,6 @@ def contact_success(request):
 
 def donations(request):
     return render(request, "donations.html")
+
+def needs(request):
+    return render(request, "needs.html")

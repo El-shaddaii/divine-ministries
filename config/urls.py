@@ -7,6 +7,7 @@ from core.views import (
     contact,
     contact_success,
     donations,
+    needs,
 )
 
 urlpatterns = [
@@ -21,4 +22,7 @@ urlpatterns = [
     path("contact-success/", contact_success, name="contact_success"),
 
     path("donate/", donations, name="donations"),
+    
+    path("community-needs/", needs, name="needs"),
+
 ]
