@@ -1437,3 +1437,47 @@ footer {
 
     border-radius:999px;
 }
+
+@media (max-width: 500px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 18px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 12px;
+        column-gap: 12px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 8px 14px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /* First row */
+    .nav-links a:nth-child(1),
+    .nav-links a:nth-child(2),
+    .nav-links a:nth-child(3) {
+        flex: 0 0 auto;
+    }
+
+    /* Second row */
+    .nav-links a:nth-child(4),
+    .nav-links a:nth-child(5) {
+        flex: 0 0 auto;
+    }
+
+}
