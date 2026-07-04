@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "django-insecure-5%p5glc8ok6djfncgp&_a(%lrik8xbfcu65co4%r5-3!g4q-$h"
 
-DEBUG = False
+DEBUG = not os.getenv("DATABASE_URL")
 
 ALLOWED_HOSTS = [
     "divine-ministries.com",
@@ -90,9 +90,17 @@ WSGI_APPLICATION = "config.wsgi.application"
 # DATABASE
 # -------------------------------------------------
 
-DATABASES = {
-    "default": dj_database_url.parse(os.environ["DATABASE_URL"])
-}
+if os.getenv("DATABASE_URL"):
+    DATABASES = {
+        "default": dj_database_url.parse(os.getenv("DATABASE_URL"))
+    }
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 # -------------------------------------------------
 # PASSWORD VALIDATION
@@ -166,13 +174,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # SECURITY
 # -------------------------------------------------
 
-SECURE_SSL_REDIRECT = True
-
-SECURE_PROXY_SSL_HEADER = (
-    "HTTP_X_FORWARDED_PROTO",
-    "https",
-)
-
-SESSION_COOKIE_SECURE = True
-
-CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = not DEBUG
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
